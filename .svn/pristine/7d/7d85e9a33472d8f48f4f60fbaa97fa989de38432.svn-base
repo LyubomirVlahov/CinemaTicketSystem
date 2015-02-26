@@ -1,0 +1,2787 @@
+[
+    {
+        "title": "X-Men: The Last Stand",
+        "description": "When a cure is found to treat mutations, lines are drawn amongst the X-Men, led by Professor Charles Xavier, and the Brotherhood, a band of powerful mutants organized under Xavier's former ally, Magneto.",
+        "type": "action",
+        "posterURL": "http://preview.chocotemplates.com/moviehunter/html/css/images/movie1.jpg",
+        "duration": 5400,
+        "projection": {
+            "startDate": "Feb 2, 2015 3:00:00 AM",
+            "endDate": "Feb 2, 2015 5:00:00 AM",
+            "hall": {
+                "rowsCount": 10,
+                "columnsCount": 10,
+                "seats": [
+                    {
+                        "row": 1,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 10,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Spider-Man 2",
+        "description": "Peter Parker is beset with troubles in his failing personal life as he battles a brilliant scientist named Doctor Otto Octavius.",
+        "type": "action",
+        "posterURL": "http://preview.chocotemplates.com/moviehunter/html/css/images/movie2.jpg",
+        "duration": 5600,
+        "projection": {
+            "startDate": "Feb 2, 2015 3:00:00 AM",
+            "endDate": "Feb 2, 2015 5:00:00 AM",
+            "hall": {
+                "rowsCount": 8,
+                "columnsCount": 10,
+                "seats": [
+                    {
+                        "row": 1,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Transformers ",
+        "description": "An ancient struggle between two Cybertronian races, the heroic Autobots and the evil Decepticons, comes to Earth, with a clue to the ultimate power held by a teenager.",
+        "type": "fantastic",
+        "posterURL": "http://preview.chocotemplates.com/moviehunter/html/css/images/movie7.jpg",
+        "duration": 7400,
+        "projection": {
+            "startDate": "Feb 2, 2015 7:00:00 AM",
+            "endDate": "Feb 2, 2015 11:00:00 AM",
+            "hall": {
+                "rowsCount": 9,
+                "columnsCount": 10,
+                "seats": [
+                    {
+                        "row": 1,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Kung Fu Panda",
+        "description": "In the Valley of Peace, Po the Panda finds himself chosen as the Dragon Warrior despite the fact that he is obese and a complete novice at martial arts.",
+        "type": "animation",
+        "posterURL": "http://preview.chocotemplates.com/moviehunter/html/css/images/movie9.jpg",
+        "duration": 5400,
+        "projection": {
+            "startDate": "Feb 3, 2015 3:00:00 AM",
+            "endDate": "Feb 3, 2015 6:00:00 AM",
+            "hall": {
+                "rowsCount": 9,
+                "columnsCount": 10,
+                "seats": [
+                    {
+                        "row": 1,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Angels & Demons",
+        "description": "Harvard symbologist Robert Langdon works to solve a murder and prevent a terrorist act against the Vatican.",
+        "type": "action, fantastic",
+        "posterURL": "http://preview.chocotemplates.com/moviehunter/html/css/images/movie12.jpg",
+        "duration": 8100,
+        "projection": {
+            "startDate": "Feb 3, 2015 3:00:00 AM",
+            "endDate": "Feb 3, 2015 6:00:00 AM",
+            "hall": {
+                "rowsCount": 9,
+                "columnsCount": 10,
+                "seats": [
+                    {
+                        "row": 1,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 1,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 2,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 3,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 4,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 5,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 6,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 7,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 8,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 1,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 2,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 3,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 4,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 5,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 6,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 7,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 8,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 9,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    },
+                    {
+                        "row": 9,
+                        "column": 10,
+                        "status": "FREE",
+                        "reservedUntil": 0
+                    }
+                ]
+            }
+        }
+    }
+]

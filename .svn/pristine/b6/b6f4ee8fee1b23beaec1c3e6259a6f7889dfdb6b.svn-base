@@ -1,0 +1,129 @@
+package com.cinema.persistence.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "SEATS")
+public class Seat implements IDBEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID")
+	private Long id;
+
+	@Column(name = "ROW_NUM")
+	private byte row;
+
+	@Column(name = "COLUMN_NUM")
+	private byte column;
+
+	@Column(name = "STATUS")
+	private Status status;
+
+	@Column(name = "RESERVED_UNTIL")
+	private long reservedUntil;
+
+	@ManyToOne
+	@JoinColumn(name = "RESERVATION_ID", referencedColumnName = "ID")
+	private Reservation reservation;
+
+	@Column(name = "RESERVATION_ID", insertable = false, updatable = false)
+	private Long reservationId;
+
+	@ManyToOne
+	@JoinColumn(name = "HALL_ID", referencedColumnName = "ID")
+	private Hall hall;
+
+	@Column(name = "HALL_ID", insertable = false, updatable = false)
+	private Long hallId;
+
+	public Seat() {
+	}
+
+	@Override
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Reservation getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(Reservation reservation) {
+		this.reservation = reservation;
+		this.reservation = reservation;
+		if (!reservation.getTickets().contains(this)) {
+			reservation.addSeat(this);
+		}
+	}
+
+	public Long getReservationId() {
+		return reservationId;
+	}
+
+	public void setReservationId(Long reservationId) {
+		this.reservationId = reservationId;
+	}
+
+	public byte getRow() {
+		return row;
+	}
+
+	public void setRow(byte row) {
+		this.row = row;
+	}
+
+	public byte getColumn() {
+		return column;
+	}
+
+	public void setColumn(byte column) {
+		this.column = column;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public long getReservedUntil() {
+		return reservedUntil;
+	}
+
+	public void setReservedUntil(long reservedUntil) {
+		this.reservedUntil = reservedUntil;
+	}
+
+	public Hall getHall() {
+		return hall;
+	}
+
+	public void setHall(Hall hall) {
+		this.hall = hall;
+		if (!hall.getSeats().contains(this)) {
+			hall.addSeat(this);
+		}
+	}
+
+	public Long getHallId() {
+		return hallId;
+	}
+
+	public void setHallId(Long hallId) {
+		this.hallId = hallId;
+	}
+}

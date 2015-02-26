@@ -1,0 +1,72 @@
+package com.cinema.servlets;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.cinema.persistence.EntityManagerProviderImpl;
+import com.cinema.persistence.dao.ReservationDAO;
+import com.cinema.persistence.model.Reservation;
+import com.cinema.persistence.model.Seat;
+import com.cinema.persistence.model.Ticket;
+
+/**
+ * Servlet implementation class InsertTicketsServlet
+ */
+@WebServlet("/InsertTicketsServlet")
+public class InsertTicketsServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public InsertTicketsServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String reservationIdString = request.getParameter("reservationId");
+
+		if (null == reservationIdString) {
+			System.err.println("Missing query parameter 'reservationId'");
+		}
+		long reservationId = Long.valueOf(reservationIdString);
+		ReservationDAO reservationDAO = new ReservationDAO(EntityManagerProviderImpl.getInstance());
+
+		Reservation reservation = reservationDAO.getById(reservationId);
+		List<Seat> seats = reservation.getSeats();
+
+		Ticket ticket = new Ticket();
+		;
+
+		reservation.addTicket(new Ticket());
+
+		for (Seat seat : seats) {
+			seat.setStatus(com.cinema.persistence.model.Status.PAID);
+			ticket.setReservation(reservation);
+		}
+
+		response.sendRedirect("SuccessfulPayment.jsp");
+
+	}
+
+}

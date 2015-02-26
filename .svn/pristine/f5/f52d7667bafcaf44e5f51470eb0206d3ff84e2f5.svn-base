@@ -1,0 +1,22 @@
+package com.cinema.booking;
+
+import com.cinema.persistence.dao.ReservationDAO;
+import com.cinema.persistence.model.Reservation;
+
+public class ReservationManager {
+
+	private final ReservationDAO reservationDAO;
+
+	public ReservationManager(ReservationDAO reservationDAO) {
+		this.reservationDAO = reservationDAO;
+	}
+
+	public void deleteReservation(Long reservationId) {
+		Reservation reservation = reservationDAO.getById(reservationId);
+		if (null == reservation) {
+			System.err.println("There is no reservation with id " + reservationId);
+		} else {
+			reservationDAO.deleteById(reservationId);
+		}
+	}
+}

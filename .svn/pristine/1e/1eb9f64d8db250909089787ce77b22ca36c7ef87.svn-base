@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<title>Основна страница</title>
+<body>
+	<!-- Navigation -->
+	<div id="navigation">
+		<ul>		
+			<li style="font-size:16px; font-weight: bold; color: white;"> Здравейте, <%= request.getUserPrincipal().getName()%> </li>
+			<li><a href="/CinemaTicketSystem/employee/administration.jsp">Начало</a></li>
+			<li><a href="/CinemaTicketSystem/Logout.jsp">Изход</a></li> 
+		</ul>
+	</div>
+	<!-- end Navigation -->
+</body>
+</html>

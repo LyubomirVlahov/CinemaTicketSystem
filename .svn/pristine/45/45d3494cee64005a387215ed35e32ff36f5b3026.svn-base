@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Неуспешен логин</title>
+</head>
+<body>
+	<h1>Не съществува потребители с такова потребителско име или парола.</h1>
+	<a href="Login.jsp"></a>
+</body>
+</html>

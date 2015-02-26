@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-By: lubo
+Build-Jdk: 1.7.0_17
+Created-By: Maven Integration for Eclipse
+Web-ContextPath: /CinemaTicketSystem
+Class-Path: 
+

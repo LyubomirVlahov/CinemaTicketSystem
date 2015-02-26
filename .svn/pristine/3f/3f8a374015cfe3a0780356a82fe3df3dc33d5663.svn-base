@@ -1,0 +1,11 @@
+package com.cinema.persistence.dao;
+
+import com.cinema.persistence.EntityManagerProvider;
+import com.cinema.persistence.model.Reservation;
+
+public class ReservationDAO extends BasicDAO<Reservation> {
+
+	public ReservationDAO(EntityManagerProvider entityManagerProvider) {
+		super(entityManagerProvider);
+	}
+}

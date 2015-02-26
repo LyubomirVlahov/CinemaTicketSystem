@@ -1,0 +1,88 @@
+<%@page import="com.cinema.persistence.model.Seat"%>
+<%@page import="java.util.List"%>
+<%@page import="com.cinema.persistence.model.Reservation"%>
+<%@page import="com.cinema.persistence.dao.ReservationDAO"%>
+<%@page import="com.cinema.persistence.EntityManagerProviderImpl"%>
+<%@page import="com.cinema.persistence.dao.ProjectionDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="javascript/jquery-func.js"></script>
+<link rel="stylesheet" href="styles/Style.css" type="text/css" media="all" />
+<link href="styles/visStyles.css" type="text/css" rel="stylesheet" />
+<link href="styles/visStylesUser.css" type="text/css" rel="stylesheet" />
+<link href="styles/global.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<!-- Shell -->
+<div id="shell">
+	<!-- Header -->
+	<div id="header">
+		<h1 id="logo"><a href="index.jsp">TU Cinema</a></h1>
+		<div class="social">
+			
+		</div>
+		
+		<!-- Navigation -->
+		<div id="navigation">
+			<ul>
+				<li style="font-size:16px; font-weight: bold; color: white;"> Здравейте <%= request.getUserPrincipal().getName()%> </li>
+			    <li><a href="index.jsp">Начало</a></li>
+			    <li><a href="Logout.jsp">Изход</a></li> 
+			</ul>
+		</div>
+		<!-- end Navigation -->
+		
+		<!-- Sub-menu -->
+		<div id="sub-navigation">
+			
+		</div>
+		<!-- end Sub-Menu -->
+		
+	</div>
+	<!-- end Header -->
+	
+	<!-- Main -->
+	<div id="main">
+		<!-- Content -->
+		<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+			
+			<% String reservationIdString = request.getParameter("reservationId");
+               if(null==reservationIdString){
+                 System.err.println("Missing query parameter 'reservationId'");
+               }
+               long reservationId=Long.valueOf(reservationIdString);
+               ReservationDAO reservationDAO = new ReservationDAO(EntityManagerProviderImpl.getInstance());
+               
+               Reservation reservation = reservationDAO.getById(reservationId);
+               List<Seat> seats = reservation.getSeats();
+			%>
+			<h3>Филм: <%= reservation.getProjection().getMovie().getTitle() %> </h3> 
+			<h3>Дата: <%= reservation.getProjection().getStartDate() %></h3> 
+			<h3>Места: <% for(Seat seat : seats){  %></h3>			
+				ред: <%= seat.getRow() %>, място: <%= seat.getColumn() %> </br>
+			<%} %>
+			<h3>Цена за 1 билет: <%= reservation.getProjection().getPrice() %> лв.</h3>
+			<h3>Крайна цена: <%= reservation.getProjection().getPrice() * seats.size() %> лв.</h3>
+			</div>
+			<!-- end Box -->
+				
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- end Content -->
+			
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end Main -->
+</div>
+<!-- end Shell -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+$(".freeSeat").click(function(evnt){
+	var selectedImg = evnt.currentTarget;
+	var selectedTableData = selectedImg.parentElement;
+	switch (selectedImg.className) {
+	case "freeSeat":
+		selectedImg.src = "img/selected_seat.png";
+		selectedImg.className = "chosenSeat";
+		break;
+	case "chosenSeat":
+		selectedImg.src = "img/free_seat.png";
+		selectedImg.className = "freeSeat";
+		break;
+	default:
+		console.error("Invalid selected seat class: " + selectedImg.className);
+		break;
+	}
+});

@@ -1,0 +1,95 @@
+package com.cinema.startup;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.List;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import com.cinema.Role;
+import com.cinema.persistence.EntityManagerProviderImpl;
+import com.cinema.persistence.dao.MovieDAO;
+import com.cinema.persistence.dao.UserDAO;
+import com.cinema.persistence.model.Movie;
+import com.cinema.persistence.model.User;
+import com.cinema.persistence.model.UserRole;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+public class DbInitializer implements ServletContextListener {
+
+	private static final String SYS_ADMIN_USERNAME = "admin";
+	private static final String SYS_ADMIN_PASS = "admin";
+	private static final String MOVIES_JSON = "/movies.json";
+
+	private final UserDAO userDAO;
+	private final MovieDAO movieDAO;
+
+	public DbInitializer() {
+		this.userDAO = new UserDAO(EntityManagerProviderImpl.getInstance());
+		this.movieDAO = new MovieDAO(EntityManagerProviderImpl.getInstance());
+	}
+
+	@Override
+	public void contextInitialized(ServletContextEvent event) {
+		User foundAdmin = userDAO.getByUsername(SYS_ADMIN_USERNAME);
+		if (null == foundAdmin) {
+			createSystemAdminUser();
+		}
+<<<<<<< .mine
+
+=======
+		initData();
+>>>>>>> .r18
+	}
+
+	private void createSystemAdminUser() {
+		User user = new User(SYS_ADMIN_USERNAME, SYS_ADMIN_PASS, "System", "Administrator", "admin@cinema-tickets.com");
+
+		UserRole employeeRole = new UserRole(Role.CINEMA_EMPLOYEE.getRoleName());
+		user.addUserRole(employeeRole);
+
+		UserRole clientRole = new UserRole(Role.CLIENT.getRoleName());
+		user.addUserRole(clientRole);
+
+		userDAO.saveNew(user);
+	}
+
+<<<<<<< .mine
+	private void createMovies() {
+		Movie movie = new Movie();
+		movie.setId((long) 0);
+		movie.setTitle("");
+	}
+
+=======
+	private void initData() {
+		MovieDAO movieDAO = new MovieDAO(EntityManagerProviderImpl.getInstance());
+		List<Movie> allMovies = movieDAO.getAll();
+		if (allMovies.isEmpty()) {
+			List<Movie> movies = loadMovies();
+			for (Movie movie : movies) {
+				movieDAO.saveNew(movie);
+			}
+		}
+	}
+
+	private List<Movie> loadMovies() {
+		try (InputStreamReader reader = new InputStreamReader(this.getClass().getResourceAsStream(MOVIES_JSON))) {
+			Gson gson = new Gson();
+			Type type = new TypeToken<List<Movie>>() {
+			}.getType();
+			return gson.fromJson(reader, type);
+		} catch (IOException ex) {
+			throw new IllegalStateException("Failed to load movies from json.", ex);
+		}
+	}
+
+>>>>>>> .r18
+	@Override
+	public void contextDestroyed(ServletContextEvent event) {
+	}
+
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Неуспешен логин</title>
+	<link rel="stylesheet" href="styles/Register.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+			<div style="text-align: center;">
+				<h1>Не съществува потребител с това име или парола!</h1>
+				<h3 style="margin-top: 10px;"><a href="Login.jsp">Опитайте отново.</a> </h3>
+			</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.List"%>
+<%@page import="com.cinema.persistence.model.Movie"%>
+<%@page import="com.cinema.persistence.EntityManagerProviderImpl"%>
+<%@page import="com.cinema.persistence.dao.MovieDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/Style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="styles/global.css" type="text/css" media="all" />
+<script type="text/javascript" src="javascript/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="javascript/jquery-func.js"></script>
+<script type="text/javascript" src="javascript/moviesShowHide.js"></script>
+<title>Home page</title>
+</head>
+<body>
+<!-- Shell -->
+<div id="shell">
+	<!-- Header -->
+	<div id="header">
+		<h1 id="logo"><a href="#" onClick="return toggle('hiddentext');">Movie Hunter</a></h1>
+		<div class="social">
+			
+		</div>
+		
+		<!-- Navigation -->
+		<div id="navigation">
+			<ul>
+			    <li><a href="index.jsp">Начало</a></li>
+			    <li><a href="Login.jsp">Вход</a></li>
+			</ul>
+		</div>
+		<!-- end Navigation -->
+		
+		<!-- Sub-menu -->
+		<div id="sub-navigation">
+			
+		</div>
+		<!-- end Sub-Menu -->
+		
+	</div>
+	<!-- end Header -->
+	
+	<!-- Main -->
+	<div id="main">
+		<!-- Content -->
+		<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+				<div class="head"> </div>
+					
+				
+				<% MovieDAO movieDAO = new MovieDAO(EntityManagerProviderImpl.getInstance());
+				List<Movie> movies = movieDAO.getAll();
+					for(Movie movie : movies){ %>
+						<div class="movie">
+							<div class="movie-image">	
+								<a href="#" onClick="unhide(document.getElementById('<%= movie.getId() %>').id);"><span class="play"><span class="name"><%= movie.getTitle() %></span></span><img src="<%= movie.getPosterURL() %>" alt="movie" /></a>	
+							</div>
+						</div>			
+					<%		
+					}
+				%>	
+				
+			</div>
+			<!-- end Box -->
+				
+				<div class="cl">&nbsp;</div>
+		</div>
+		<!-- end Content -->
+			
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end Main -->
+
+	<% for(Movie movie : movies){ %>
+		<div style="display: none; margin-top: 2rem;" id="<%= movie.getId() %>" class="movieDescr">
+			<h1><%= movie.getTitle() %> </h1>
+			<h3>Genre: <%= movie.getType() %></h3> 
+			 <h3>Duration: <%=movie.getDuration()/60 %> minutes</h3> 
+			 </br>
+			 
+			<p>Description: <%= movie.getDescription() %> </p>
+			<%= movie.getProjection().getStartDate().toString() %>
+			</br></br>
+			
+			<h4>Next projection: 
+			<% Date nextDate=movie.getProjection().getStartDate();
+			SimpleDateFormat formatter = new SimpleDateFormat("H:mm dd/M/yyyy");
+			%> <%=formatter.format(nextDate) %> </h4> 
+			
+              <div style="text-align: right;" onclick="javascript:window.location='Reservation.jsp?hallId=<%=movie.getProjection().getHallId()%>';" >
+              	<a class="btn">Reserve</a>
+              </div>
+		</div>
+	<%}%>
+		
+		
+	
+	<!-- Footer -->
+	<div id="footer">
+		<p>
+			<a href="#">Начало</a> <span>|</span>
+			<a href="#">Вход</a>
+		</p>
+	</div>
+	<!-- end Footer -->
+</div>
+<!-- end Shell -->
+</body>
+</html>

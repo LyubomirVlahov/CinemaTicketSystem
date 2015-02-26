@@ -1,0 +1,58 @@
+package com.cinema.startup;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import com.cinema.Role;
+import com.cinema.persistence.EntityManagerProviderImpl;
+import com.cinema.persistence.dao.MovieDAO;
+import com.cinema.persistence.dao.UserDAO;
+import com.cinema.persistence.model.Movie;
+import com.cinema.persistence.model.User;
+import com.cinema.persistence.model.UserRole;
+
+public class DbInitializer implements ServletContextListener {
+
+	private static final String SYS_ADMIN_USERNAME = "admin";
+	private static final String SYS_ADMIN_PASS = "admin";
+
+	private final UserDAO userDAO;
+	private final MovieDAO movieDAO;
+
+	public DbInitializer() {
+		this.userDAO = new UserDAO(EntityManagerProviderImpl.getInstance());
+		this.movieDAO = new MovieDAO(EntityManagerProviderImpl.getInstance());
+	}
+
+	@Override
+	public void contextInitialized(ServletContextEvent event) {
+		User foundAdmin = userDAO.getByUsername(SYS_ADMIN_USERNAME);
+		if (null == foundAdmin) {
+			createSystemAdminUser();
+		}
+
+	}
+
+	private void createSystemAdminUser() {
+		User user = new User(SYS_ADMIN_USERNAME, SYS_ADMIN_PASS, "System", "Administrator", "admin@cinema-tickets.com");
+
+		UserRole employeeRole = new UserRole(Role.CINEMA_EMPLOYEE.getRoleName());
+		user.addUserRole(employeeRole);
+
+		UserRole clientRole = new UserRole(Role.CLIENT.getRoleName());
+		user.addUserRole(clientRole);
+
+		userDAO.saveNew(user);
+	}
+
+	private void createMovies() {
+		Movie movie = new Movie();
+		movie.setId((long) 0);
+		movie.setTitle("");
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent event) {
+	}
+
+}

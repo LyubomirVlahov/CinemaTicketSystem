@@ -1,0 +1,11 @@
+#This file contains JPA Diagram Editor settings
+#Sat Jan 10 16:40:29 EET 2015
+supportOrmXml=false
+accessType=field
+defaultTableNamePrefix=
+defaultPackage=com.cinema.persistence.model
+directEditAffectsClass=true
+diagramFolder=diagrams
+ormXmlFileName=META-INF/orm.xml
+collectionType=list
+oneToManyOldStyle=false

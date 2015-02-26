@@ -1,0 +1,127 @@
+<%@page import="com.cinema.persistence.model.Seat"%>
+<%@page import="java.util.List"%>
+<%@page import="com.cinema.persistence.model.Reservation"%>
+<%@page import="com.cinema.persistence.dao.ReservationDAO"%>
+<%@page import="com.cinema.persistence.EntityManagerProviderImpl"%>
+<%@page import="com.cinema.persistence.dao.ProjectionDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Плащане</title>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery-func.js"></script>
+	<script type="text/javascript" src="javascript/payment.js"></script>
+	<link rel="stylesheet" href="styles/Style.css" type="text/css" media="all" />
+	<link href="styles/visStyles.css" type="text/css" rel="stylesheet" />
+	<link href="styles/visStylesUser.css" type="text/css" rel="stylesheet" />
+	<link href="styles/global.css" type="text/css" rel="stylesheet" />
+<script>
+window.onload=timer(
+	    10*60*1000, // milliseconds
+	    function(timeleft) { // called every step to update the visible countdown
+	    	var minutes = Math.floor(timeleft / 60);
+	    	var seconds = timeleft - minutes * 60;
+	    	if(seconds>9){
+	        document.getElementById('timer').innerHTML = minutes +":" + seconds;
+	    	}else{
+	    		document.getElementById('timer').innerHTML = minutes +":0" + seconds;
+	    	}
+	    },
+	    function() {
+	    	deleteReservation(<%=request.getParameter("reservationId")%>);
+	    }
+	);
+</script>
+</head>
+<body onbeforeunload="deleteReservation(<%=request.getParameter("reservationId")%>)">
+<!-- Shell -->
+<div id="shell">
+	<!-- Header -->
+	<div id="header">
+		<h1 id="logo"><a href="index.jsp">TU Cinema</a></h1>
+		<div class="social">
+			
+		</div>
+		
+		<!-- Navigation -->
+		<div id="navigation">
+			<ul>
+				<li style="font-size:16px; font-weight: bold; color: white;"> Здравейте <%= request.getUserPrincipal().getName()%> </li>
+			    <li><a href="index.jsp">Начало</a></li>
+			    <li><a href="Logout.jsp">Изход</a></li> 
+			    <li><a href="Profile.jsp">Профил</a></li>
+			</ul>
+		</div>
+		<!-- end Navigation -->
+		
+		<!-- Sub-menu -->
+		<div id="sub-navigation">
+			
+		</div>
+		<!-- end Sub-Menu -->
+		
+	</div>
+	<!-- end Header -->
+	
+	<!-- Main -->
+	<div id="main">
+		<!-- Content -->
+		<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+			
+				<% String reservationIdString = request.getParameter("reservationId");
+	               if(null==reservationIdString){
+	                 throw new IllegalArgumentException("Missing query parameter 'reservationId'");
+	               }
+	               long reservationId=Long.valueOf(reservationIdString);
+	               ReservationDAO reservationDAO = new ReservationDAO(EntityManagerProviderImpl.getInstance());
+	               
+	               Reservation reservation = reservationDAO.getById(reservationId);
+	               List<Seat> seats = reservation.getSeats();
+				%>
+			
+				<div class="timer">
+					<h1>Оставащо време за завършване на поръчката:</h1> 
+					<div id="timer"></div>
+				</div>
+	
+				<div class="reservationInfo">
+					<h4>Филм: </h4>  <%= reservation.getProjection().getMovie().getTitle() %>  </br>
+					<h4>Дата: </h4> <%= reservation.getProjection().getStartDate() %> </br>
+					<h4>Места: </h4> <% for(Seat seat : seats){  %>		</br>	
+						ред: <%= seat.getRow() %>, място: <%= seat.getColumn() %> </br>
+					<%} %>
+					<h4>Цена за 1 билет: </h4><%= reservation.getProjection().getPrice() %> лв. </br>
+					<h4>Крайна цена: </h4><%= reservation.getProjection().getPrice() * seats.size() %> лв.</br>
+				</div>
+				
+				<div class="paymentMethods">
+				<h4> Изберете начин за плащане:</h4>
+					<input type="radio" name="payMethod" value="esyPay">ePay</input><br>
+					<input type="radio" name="payMethod" value="PayPal">PayPal</input><br>
+					<input type="radio" name="payMethod" value="Карта">Карта</input><br>
+				</div>
+				
+				
+              <div style="text-align: right;" onclick="payReservation(<%=reservationIdString%>)">
+              	<a class="btn">Плати</a>
+              </div>
+			</div>
+		<!-- end Box -->
+				
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- end Content -->
+			
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end Main -->
+</div>
+<!-- end Shell -->
+</body>
+</html>

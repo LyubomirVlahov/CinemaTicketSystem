@@ -1,0 +1,93 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.List"%>
+<%@page import="com.cinema.persistence.model.Movie"%>
+<%@page import="com.cinema.persistence.EntityManagerProviderImpl"%>
+<%@page import="com.cinema.persistence.dao.MovieDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Основна страница</title>
+	<link rel="stylesheet" href="/CinemaTicketSystem/styles/Style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/CinemaTicketSystem/styles/global.css" type="text/css" media="all" />
+	<script src="javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery-func.js"></script>
+	<script type="text/javascript" src="javascript/movies.js"></script>
+</head>
+<body>
+<!-- Shell -->
+<div id="shell">
+	<!-- Header -->
+	<div id="header">
+		<h1 id="logo"><a href="/CinemaTicketSystem/employee/administration.jsp">TU Cinema</a></h1>
+		<div class="social">
+			
+		</div>
+		
+		<!-- Navigation -->
+		<div id="navigation">
+			<ul>		
+				<li style="font-size:16px; font-weight: bold; color: white;"> Здравейте, <%= request.getUserPrincipal().getName()%> </li>
+			    <li><a href="/CinemaTicketSystem/employee/administration.jsp">Начало</a></li>
+			    <li><a href="/CinemaTicketSystem/Logout.jsp">Изход</a></li> 
+			</ul>
+		</div>
+		<!-- end Navigation -->
+		
+		<!-- Sub-menu -->
+		<div id="sub-navigation">
+			
+		</div>
+		<!-- end Sub-Menu -->
+		
+	</div>
+	<!-- end Header -->
+	
+	<!-- Main -->
+	<div id="main">
+		<!-- Content -->
+		<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+				<div class="head"> </div>
+					
+				
+				<% MovieDAO movieDAO = new MovieDAO(EntityManagerProviderImpl.getInstance());
+				List<Movie> movies = movieDAO.getAll();
+					for(Movie movie : movies){ %>
+						<div class="movie">
+							<div class="movie-image">	
+								<a href="#" onclick="javascript:window.location='/CinemaTicketSystem/Reservation.jsp?projectionId=<%=movie.getProjection().getId()%>';"><span class="play"><span class="name"><%= movie.getTitle() %></span></span><img src="<%= movie.getPosterURL() %>" alt="movie" /></a>	
+							</div>
+						</div>			
+					<%		
+					}
+				%>	
+				
+			</div>
+			<!-- end Box -->
+				
+				<div class="cl">&nbsp;</div>
+		</div>
+		<!-- end Content -->
+			
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end Main -->
+	
+	<!-- Footer -->
+	<div id="footer">
+		<p>
+			<a href="/CinemaTicketSystem/employee/administration.jsp">Начало</a> <span>|</span>
+			<a href="/CinemaTicketSystem/Logout.jsp">Изход</a>
+		</p>
+	</div>
+	<!-- end Footer -->
+</div>
+<!-- end Shell -->
+</body>
+</html>

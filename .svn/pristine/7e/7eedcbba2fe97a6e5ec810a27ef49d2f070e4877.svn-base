@@ -1,0 +1,218 @@
+/****************************************
+ CUSTOMER STYLESHEET CUSTOMISATION FILE
+
+ Copy styles from visStyles.css that you wish to override.
+ Styles written in this file will take precedence over other styles
+ in the base visStyles.css file.
+
+ For example, to change the text colour on visError.aspx to black
+ add the following style override to this file
+ 
+ .UnexpectedErrorText
+ {
+    color:#000000;
+ }
+
+ All other attributes of this text (font size, weighting and type) will
+ be interpreted using visStyles.css
+****************************************/
+
+/* --- START COMMON CSS	---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+	*{margin:0; padding:0;}
+	a{text-decoration:none;}
+	a img{border:0;}
+	
+	.cl{font-size:0; line-height:0; clear:both;}
+	.no-text{text-indent:-9999px; font-size:0; line-height:0; color:#fff;}
+	.fl{float:left;}
+	.fr{float:right;}
+	.db{display:block;}
+	.di{display:inline;}
+	.dn{display:none;}
+	input{font-size:12px; color:#373737; font-family:Arial;}
+	textarea{font-size:12px; color:#373737; font-family:Arial;}
+/* --- END COMMON CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* --- START BODY & SHELL -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+	body, .FormStandard{font-size:12px; font-family:Arial; line-height:14px; letter-spacing:0px; color:#585858; background:#181818 url(images_user/bg.png) top repeat-x;}
+	table, table tr td, table tr th{font-size:12px; font-family:Arial; line-height:14px; letter-spacing:0px; color:#585858;}
+	#shell{width:995px; background:url(images_user/shell.png) top no-repeat;}
+	#center{background:#1f1f1f; width:966px; padding-bottom:30px;}
+/* --- END BODY & SHELL ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* --- START HEADER -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+	#header{height:91px; position:relative;}
+	
+	h1#logo{width:259px; height:46px; position:absolute; top:24px; left:22px;}
+	h1#logo a{display:block; width:259px; height:46px; cursor:pointer; background:url(images_user/logo.png);}
+
+	#langs{position:absolute; top:0; left:350px; height:17px; line-height:17px;}
+	#langs a, #langs span{width:22px; height:17px; line-height:17px; display:inline; float:left; color:#606060; font-size:10px; text-align:center; margin-right:3px;}
+	#langs a:hover{color:#f3333a;}
+	#langs span{background:url(images_user/langs-bg.png); cursor:default;}
+/* --- END HEADER ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* --- START MENU ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+	#menu{padding:5px 0 0 10px; width:956px; height:56px; background:url(images_user/menu.png);}
+	#menu ul{list-style:none;}
+
+	#menu .menu{float:left; margin-top:22px; width:800px; display:inline;}
+	#menu .menu ul li{display:inline; background:url(images_user/menu-div.png) right no-repeat; padding:0 34px 0 6px; position:relative;}
+	#menu .menu ul li a{font-weight:bold; color:#dad9da; font-size:14px;}
+	#menu .menu ul li a:hover{color:#f3333a;}
+	
+	#menu .login{float:right; margin:0 15px 0 0; height:26px; background:url(images_user/menu-login-bg.png); width:69px;}
+	#menu .login a{font-weight:bold; color:#9f9d93; line-height:26px; font-size:14px; padding-left:5px; background:url(images_user/menu-login-but.png) 45px center no-repeat; display:block;}
+	#menu .login a:hover{color:#f3333a;}
+/* --- END MENU ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* --- START CONTENT ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+	#content{width:950px; position:relative; background:#fff; color:#585858!important;}
+	#content .corner-top{position:absolute; top:0; right:0; background:url(images_user/content-corners.png) 0 0; width:3px; height:3px;}
+	#content .corner-bottom{position:absolute; bottom:0; right:0; background:url(images_user/content-corners.png) 0 -3px; width:3px; height:3px;}
+	#content .inner{padding:20px;}
+	#content .inner h1.pagetitle{font-size:18px; font-weight:bold; line-height:22px; color:#000; margin-bottom:20px; text-transform:uppercase;}
+	#content .inner .container{margin-bottom:20px;}
+	#content .inner .container ul{list-style:none;}
+	#content .inner .container ul li{float:left; margin:0 0 10px 0; width:910px;}
+	#content .inner .container ul li span{display:block;}
+	#content .inner .container ul li span.pic{width:86px; height:79px; padding:0px 6px 6px 0; background:url(images_user/movie-list-thumb-bg.png) no-repeat; float:left;}
+	#content .inner .container ul li span.info{width:800px; float:right; text-align:left;}
+	#content .inner .container ul li span.info span.title{line-height:20px; border-bottom:1px solid #E0E0E0; line-height:22px;}
+	#content .inner .container ul li span.info span.title a{font-size:16px; font-weight:bold; text-transform:uppercase; color:#34A9DC;}
+	#content .inner .container ul li span.info span.title a:hover{color:#f3333a;}
+	#content .inner .container ul li span.info span.text{color:#232323; font-size:10px; font-family:Verdana; line-height:12px; margin-top:2px;}
+	#content .inner .container ul li span.info span.text b{padding-right:5px;}
+	
+	.DetailsText, .TicketPageText{color:#585858!important;}
+	#lblBelowTicketDetail{display:none;}
+	
+	#tblCurrentSession tbody tr th{width:400px!important;}
+	#tblCurrentSession tbody tr th + th{width:100px!important;}
+	#tblCurrentSession tbody tr th + th + th{width:100px!important;}
+	#tblCurrentSession tbody tr th + th + th +th{width:100px!important;}
+	
+	html>body #tblTickets tbody tr td, html>body #tblTickets tbody tr td+td, html>body #tblTickets tbody tr td+td+td, html>body #tblTickets tbody tr td+td+td+td+td, html>body #tblTickets tbody tr td+td+td+td+td+td+td+td, html>body #tblTickets tbody tr td+td+td+td+td+td+td+td+td+td{display:none!important;}
+	html>body #tblTickets tbody tr td+td+td+td, html>body #tblTickets tbody tr td+td+td+td+td+td, html>body #tblTickets tbody tr td+td+td+td+td+td+td, html>body #tblTickets tbody tr td+td+td+td+td+td+td+td+td{display:table-cell!important;}
+	html>body #tblTickets tbody tr td+td+td+td{width:400px!important;}
+	html>body #tblTickets tbody tr td+td+td+td+td+td{width:100px!important;}
+	html>body #tblTickets tbody tr td+td+td+td+td+td+td{width:100px!important;}
+	html>body #tblTickets tbody tr td+td+td+td+td+td+td+td+td{width:100px!important;}
+
+	#tblCurrentTickets tbody tr{background:none!important;}
+	
+	#tblCurrentTickets tbody tr th{width:400px!important;}
+	#tblCurrentTickets tbody tr th + th{width:100px!important;}
+	#tblCurrentTickets tbody tr th + th + th{width:100px!important;}
+	#tblCurrentTickets tbody tr th + th + th +th{width:100px!important;}
+	
+	html>body #tblTickets tbody tr td{background:#ddd;}
+	html>body #tblTickets tbody tr+tr td, #tblTickets tbody tr+tr+tr td, #tblTickets tbody tr+tr+tr+tr td, #tblTickets tbody tr+tr+tr+tr+tr td{background:#F8F8F8;}
+	
+	#lblClockExplanation{font-size:11px; color:#585858;}
+	
+	#tdAppLabel{width:620px!important;}
+	#lblTimeRemaining{display:none;}
+	.ClockTable{width:120px!important; background:none!important; border:none!important;}
+	.ClockTable td{width:120px!important; text-align:right!important;}
+	
+	.TicketType{font-weight:normal; color:#585858;}
+	
+	#orderDetails{width:100%;}
+	
+	.blue-text{font-size:12px; font-weight:bold; text-transform:uppercase; color:#34A9DC; line-height:16px;}
+	.red-text{font-size:12px; font-weight:bold; text-transform:uppercase; color:#f3333a; line-height:16px;}
+	
+	#tblCurrentSession, #tblTickets, #tblCurrentTickets{border-left:1px solid #eee; border-top:1px solid #eee;}
+	#tblCurrentSession tr th, #tblTickets tr th, #tblCurrentTickets tr th{background:#ddd; border-bottom:1px solid #eee; border-right:1px solid #eee; padding:5px; font-size:14px; font-weight:bold; text-transform:uppercase; color:#555; line-height:16px; text-align:left;}
+	#tblCurrentSession tr td, #tblCurrentTickets tr td{background:#f8f8f8; border-bottom:1px solid #eee; border-right:1px solid #eee; padding:5px; font-size:12px; font-weight:normal; color:#f3333a; line-height:16px;}
+	#tblTickets tr td{background:#f8f8f8; border-bottom:1px solid #eee; border-right:1px solid #eee; padding:5px; font-size:12px; font-weight:normal; color:#585858; line-height:16px;}
+	
+	.LoyaltyStandardTable{border:1px solid #eee;}
+	.LoyaltyStandardTable .LoyaltyTicHeaderRow td{background:#ddd; padding:5px 0; font-size:14px; font-weight:bold; text-transform:uppercase; color:#555; line-height:16px; text-align:left;}
+	.LoyaltyStandardTable tr{background:#f8f8f8;}
+	#lblLtyTicHeader{font-weight:bold; color:#CC0000; margin-bottom:0!important;}
+	#visLtyLogin_ibtnSkip{display:none;}
+	#visLtyLogin_ibtnSignIn{margin-top:5px; width:119px!important;}
+	#lblLtyTicBlurb, #visLtyLogin_lblUserName, #visLtyLogin_lblPassword{color:#585858;}
+	.LoyaltyLoginDetailsRow{margin-top:5px; color:#585858;}
+	#visLtyLogin_txtUserName, #visLtyLogin_txtPassword{margin-top:5px;}
+	#visLtyLogin_lblLoginHeader{color:#585858!important;}
+	
+	#content a{color:#34A9DC;}
+	#content a:hover{text-decoration:underline;}
+	
+	#orderDetails, #tblTotal, #tblClock{margin-bottom:20px;}
+	
+	#AreaSeats1{position:relative;}
+	
+	#lblLtyTicHeader{display:block; margin-bottom:10px;}
+	#lblLtyTicBlurb{display:block; margin-bottom:30px;}
+	#visLtyLogin_lblLoginHeader{display:block; margin-bottom:10px;}
+	#lblAboveTicketDetail{display:block; margin-bottom:10px;}
+	
+	.mb30{margin-bottom:30px;}
+	
+	#login_left{width:500px; float:left;}
+	
+	#login_right{width:360px; float:right;}
+	
+	.DetailsTableBorder, .BodyTable{border:none!important;}
+	
+	#orderDetails, .DetailsHeaderRow{background:none;}
+	#orderHeader{display:none!important;}
+	.CinLabel{display:none!important;}
+	
+	#visOrderTracker_txtCinemaDetails, #visOrderSummary_txtCinemaDetails{font-size:18px; font-weight:bold; line-height:22px; color:#000; margin-bottom:20px; text-transform:uppercase; display:block;}
+	
+	#ibtnShowAllSeats, #visOrderSummary_lblShows{display:none!important;}
+	#divSeatMap, #divSeatMapFront, #divSeatMapBack{overflow:hidden!important;}
+	.DetailsRow{background:none!important;}
+	.OrderDetailsDescription{text-indent:0!important;}
+	.OrderDetailsDescription span{font-weight:bold!important;}
+	#visOrderSummary_txtGrandTotalDetails{text-decoration:none!important; color:#CC0000!important;}
+	#visOrderSummary_rptShowtimeList__ctl0_divCartSession{background:#F8F8F8!important; padding:5px;}
+	#tblItemList tr td{padding-bottom:0!important;}
+	#visOrderSummary_lblGrandTotal{padding-left:5px;}
+	
+	#visOrderSummary_rptShowtimeList__ctl0_lblShowtime{width:118px;}
+	
+	#tblItemList{border-top:1px solid #eee; padding-top:5px;}
+	
+	#tblDetailsFrame{border:1px solid #ddd;}
+	#tblHeader tr{background:#F8F8F8;}
+	#tblHeader tr.ConfirmDetailsHeaderRow{background:#ddd;}
+	#lblDetailsHeader, #lblPickupInfo, #lblEmailConfirmation, .ConfirmDetailsText, .ConfirmDetailsTax{color:#585858;}
+	#tblDetails tr, #tblButtons tr{background:#F8F8F8;}
+	
+	#rptShowtimeList__ctl0_lblShowtime{display:block; width:140px; text-align:left;}
+	
+	#ibtnSignIn, #ibtnChangeSession, #ibtnCancel, #ibtnSelectConcessions{display:none;}
+	
+	#tblBody{width:900px!important;}
+	
+	#imgChangeTickets{width:150px!important;}
+	#imgChangeSeats{width:140px!important;}
+	#ibtnChangeTickets{margin-right:5px!important;}
+	#ibtnNext{padding:0!important;}
+	
+	.PaymentDetailsSubHeader, .PaymentWarning{color:#585858!important;}
+	
+	.FormStandard #Form1 table tbody tr td img.FormStandard{display:none;}
+	#Form1{margin:0;}
+	
+	#divNS1, #divNS2, #divNS3, #divCS{display:none;}
+	
+	#ibtnHome{display:none;}
+	#tblButtons tr.ConfirmDetailsRow td{padding-bottom:10px;}
+	
+	.ImageProcessing{width:220px!important; height:19px!important; padding-top:10px;}
+	
+	#txtBookingIdDetail{font-size:14px; font-weight:bold;}
+	
+	#lblShows{display:none;}
+	
+	#ibtnBack{display:none;}
+	
+	#lnkVerify, #lblVerify, #ibtnSessionTimes, #ibtnShowMySeats, #ibtnShowAllSeats{display:none!important;}
+
+	.Screen-AreaName {font-size: 0px!important;}
+	
+	#lblScreen{font-size:28px; line-height:46px; font-weight:bold; text-transform:uppercase;}
+/* --- END CONTENT --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */

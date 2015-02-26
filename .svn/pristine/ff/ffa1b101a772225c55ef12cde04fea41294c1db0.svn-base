@@ -1,0 +1,144 @@
+package com.cinema.persistence.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "RESERVATIONS", uniqueConstraints = { @UniqueConstraint(columnNames = { "UUID" }) })
+public class Reservation implements IDBEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID")
+	private Long id;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reservation", fetch = FetchType.EAGER, targetEntity = Ticket.class)
+	private List<Ticket> tickets;
+
+	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REFRESH }, mappedBy = "reservation", fetch = FetchType.EAGER, targetEntity = Seat.class)
+	private List<Seat> seats;
+
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REFRESH })
+	@JoinColumn(name = "USER_ID", referencedColumnName = "ID")
+	private User user;
+
+	@Column(name = "USER_ID", insertable = false, updatable = false)
+	private Long userId;
+
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REFRESH })
+	@JoinColumn(name = "PROJECTION_ID", referencedColumnName = "ID")
+	private Projection projection;
+
+	@Column(name = "PROJECTION_ID", insertable = false, updatable = false)
+	private Long projectionId;
+
+	@Column(name = "UUID")
+	private String UUID;
+
+	public Reservation() {
+	}
+
+	@Override
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public List<Ticket> getTickets() {
+		if (tickets == null) {
+			tickets = new ArrayList<>();
+		}
+		return tickets;
+	}
+
+	public void setTickets(List<Ticket> tickets) {
+		this.tickets = tickets;
+	}
+
+	public void addTicket(Ticket ticket) {
+		getTickets().add(ticket);
+		if (ticket.getReservation() != this) {
+			ticket.setReservation(this);
+		}
+	}
+
+	public List<Seat> getSeats() {
+		if (seats == null) {
+			seats = new ArrayList<>();
+		}
+		return seats;
+	}
+
+	public void setSeats(List<Seat> seats) {
+		this.seats = seats;
+	}
+
+	public void addSeat(Seat seat) {
+		getSeats().add(seat);
+		if (seat.getReservation() != this) {
+			seat.setReservation(this);
+		}
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+		if (!user.getReservations().contains(this)) {
+			user.addReservation(this);
+		}
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public Projection getProjection() {
+		return projection;
+	}
+
+	public void setProjection(Projection projection) {
+		this.projection = projection;
+		if (!projection.getReservations().contains(this)) {
+			projection.addReservation(this);
+		}
+	}
+
+	public Long getProjectionId() {
+		return projectionId;
+	}
+
+	public void setProjectionId(Long projectionId) {
+		this.projectionId = projectionId;
+	}
+
+	public String getUUID() {
+		return UUID;
+	}
+
+	public void setUUID(String uUID) {
+		UUID = uUID;
+	}
+}

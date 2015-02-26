@@ -1,0 +1,100 @@
+package com.cinema.booking;
+
+import java.util.List;
+
+import com.cinema.persistence.dao.ProjectionDAO;
+import com.cinema.persistence.dao.ReservationDAO;
+import com.cinema.persistence.dao.SeatDAO;
+import com.cinema.persistence.dao.UserDAO;
+import com.cinema.persistence.model.Projection;
+import com.cinema.persistence.model.Reservation;
+import com.cinema.persistence.model.Seat;
+import com.cinema.persistence.model.Status;
+import com.cinema.persistence.model.User;
+
+public class BookingAgentImpl implements BookingAgent {
+
+	private static final long RESERVATION_PERIOD = 10 * 60 * 1000;
+
+	private final SeatDAO seatDAO;
+	private final UserDAO userDAO;
+	private final ProjectionDAO projectionDAO;
+	private final ReservationDAO reservationDAO;
+
+	public BookingAgentImpl(SeatDAO seatDAO, UserDAO userDAO, ProjectionDAO projectionDAO, ReservationDAO reservationDAO) {
+		this.seatDAO = seatDAO;
+		this.userDAO = userDAO;
+		this.projectionDAO = projectionDAO;
+		this.reservationDAO = reservationDAO;
+	}
+
+	@Override
+	public void book(BookRequest bookRequest, String username) throws BookingException {
+		long reservationTime = System.currentTimeMillis();
+		List<Seat> seats = seatDAO.getAll(bookRequest.getSeatIds());
+		Projection projection = projectionDAO.getById(bookRequest.getProjectionId());
+		validateSeats(projection, seats);
+
+		boolean seatsAvailable = areSeatsAvailable(reservationTime, seats);
+		if (!seatsAvailable) {
+			throw new BadBookingRequestException("The requested booking contains busy seat.");
+		}
+
+		User user = getUser(username);
+		makeReservation(user, projection, seats, reservationTime);
+	}
+
+	private void validateSeats(Projection projection, List<Seat> seats) throws BadBookingRequestException {
+		if (seats.isEmpty()) {
+			throw new BadBookingRequestException("There is no seats in the reservation.");
+		}
+		for (Seat seat : seats) {
+			if (seat.getHall().getId() != projection.getHall().getId()) {
+				throw new BadBookingRequestException("There requested seats are not from the same projection.");
+			}
+		}
+	}
+
+	private boolean areSeatsAvailable(long reservationTime, List<Seat> seats) {
+		boolean seatsAvailable = true;
+		for (Seat seat : seats) {
+			if (!isSeatAvailable(seat, reservationTime)) {
+				seatsAvailable = false;
+				break;
+			}
+		}
+		return seatsAvailable;
+	}
+
+	private boolean isSeatAvailable(Seat seat, long reservationTime) {
+		Status seatStatus = seat.getStatus();
+		return seatStatus == Status.FREE || (seatStatus == Status.RESERVED && reservationTime > seat.getReservedUntil());
+	}
+
+	private User getUser(String username) {
+		User user = userDAO.getByUsername(username);
+		if (null == user) {
+			throw new IllegalStateException("Missing user with username: " + username);
+		}
+		return user;
+	}
+
+	private void makeReservation(User user, Projection projection, List<Seat> seats, long reservationTime) {
+		Reservation reservation = new Reservation();
+		reservation.setUser(user);
+		reservation.setSeats(seats);
+		reservation.setProjection(projection);
+		Reservation savedReservation = reservationDAO.saveNew(reservation);
+		updateSeats(seats, savedReservation, reservationTime);
+	}
+
+	private void updateSeats(List<Seat> seats, Reservation reservation, final long reservationTime) {
+		for (Seat seat : seats) {
+			seat.setReservation(reservation);
+			seat.setStatus(Status.RESERVED);
+			seat.setReservedUntil(reservationTime + RESERVATION_PERIOD);
+			seatDAO.save(seat);
+		}
+	}
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<%@page import="java.util.Collection"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="styles/Login.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<section id="content">
+			<form id="form" method="POST" action="j_security_check">
+				<h2>Вход във CinemaTicket</h2>
+				<div>
+
+					<input type="text" placeholder="Потребител" name="j_username"
+						id="username" autofocus />
+				</div>
+
+				<div>
+					<input type="password" placeholder="Парола" name="j_password"
+						id="password" />
+				</div>
+
+				<div>
+					<input type="submit" value="Go" />
+					<a id="regLink" href="Register.jsp">Регистрирай се! </a>
+				</div>
+			</form>
+		</section>
+	</div>
+</body>
+</html>

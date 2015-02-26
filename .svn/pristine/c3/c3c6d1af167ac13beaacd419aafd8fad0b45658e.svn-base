@@ -1,0 +1,31 @@
+package com.cinema.persistence.dao;
+
+import javax.persistence.EntityManager;
+
+import com.cinema.persistence.EntityManagerProvider;
+import com.cinema.persistence.model.Reservation;
+import com.cinema.persistence.model.Seat;
+import com.cinema.persistence.model.Status;
+
+public class ReservationDAO extends BasicDAO<Reservation> {
+
+	public ReservationDAO(EntityManagerProvider entityManagerProvider) {
+		super(entityManagerProvider);
+	}
+
+	public void deleteById(Long reservationId) {
+		EntityManager entityManager = entityManagerProvider.createEntityManager();
+		Reservation reservation = getById(reservationId, entityManager);
+		if (null == reservation) {
+			throw new IllegalArgumentException("Missing reservation with id " + reservationId);
+		}
+		entityManager.getTransaction().begin();
+		for (Seat seat : reservation.getSeats()) {
+			seat.setStatus(Status.FREE);
+			seat.setReservedUntil(0L);
+			seat.setReservation(null);
+		}
+		entityManager.remove(reservation);
+		entityManager.getTransaction().commit();
+	}
+}

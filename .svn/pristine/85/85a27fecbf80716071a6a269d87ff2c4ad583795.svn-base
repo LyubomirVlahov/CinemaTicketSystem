@@ -1,0 +1,120 @@
+package com.cinema.startup;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import com.cinema.Role;
+import com.cinema.persistence.EntityManagerProviderImpl;
+import com.cinema.persistence.dao.MovieDAO;
+import com.cinema.persistence.dao.SeatDAO;
+import com.cinema.persistence.dao.UserDAO;
+import com.cinema.persistence.model.Hall;
+import com.cinema.persistence.model.Movie;
+import com.cinema.persistence.model.Seat;
+import com.cinema.persistence.model.User;
+import com.cinema.persistence.model.UserRole;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+public class DbInitializer implements ServletContextListener {
+
+	private static final String SYS_ADMIN_USERNAME = "admin";
+	private static final String SYS_ADMIN_PASS = "admin";
+	private static final String MOVIES_JSON = "/movies.json";
+
+	private final UserDAO userDAO;
+	private final MovieDAO movieDAO;
+	private final SeatDAO seatDAO;
+
+	public DbInitializer() {
+		this.userDAO = new UserDAO(EntityManagerProviderImpl.getInstance());
+		this.movieDAO = new MovieDAO(EntityManagerProviderImpl.getInstance());
+		this.seatDAO = new SeatDAO(EntityManagerProviderImpl.getInstance());
+	}
+
+	@Override
+	public void contextInitialized(ServletContextEvent event) {
+		User foundAdmin = userDAO.getByUsername(SYS_ADMIN_USERNAME);
+		if (null == foundAdmin) {
+			createSystemAdminUser();
+		}
+		initData();
+	}
+
+	private void createSystemAdminUser() {
+		User user = new User(SYS_ADMIN_USERNAME, SYS_ADMIN_PASS, "System", "Administrator", "admin@cinema-tickets.com");
+
+		UserRole employeeRole = new UserRole(Role.CINEMA_EMPLOYEE.getRoleName());
+		user.addUserRole(employeeRole);
+
+		UserRole clientRole = new UserRole(Role.CLIENT.getRoleName());
+		user.addUserRole(clientRole);
+
+		userDAO.saveNew(user);
+	}
+
+	private void initData() {
+		List<Movie> allMovies = movieDAO.getAll();
+		if (allMovies.isEmpty()) {
+			persistMovies();
+		}
+	}
+
+	private void persistMovies() {
+		List<Movie> movies = loadMovies();
+		List<Movie> persistedMovies = new ArrayList<Movie>(movies.size());
+		List<List<Seat>> seats = new ArrayList<>(movies.size());
+		for (Movie movie : movies) {
+			seats.add(movie.getProjection().getHall().getSeats());
+			movie.getProjection().getHall().setSeats(null);
+			Movie persistedMovie = movieDAO.saveNew(movie);
+			persistedMovies.add(persistedMovie);
+		}
+		persistSeats(persistedMovies, seats);
+	}
+
+	private List<Movie> loadMovies() {
+		try (InputStreamReader reader = new InputStreamReader(this.getClass().getResourceAsStream(MOVIES_JSON))) {
+			Gson gson = new Gson();
+			Type type = new TypeToken<List<Movie>>() {
+			}.getType();
+			return gson.fromJson(reader, type);
+		} catch (IOException ex) {
+			throw new IllegalStateException("Failed to load movies from json.", ex);
+		}
+	}
+
+	private void persistSeats(List<Movie> persistedMovies, List<List<Seat>> seats) {
+		List<List<Seat>> persistedHallSeats = new ArrayList<List<Seat>>(persistedMovies.size());
+		for (int idx = 0; idx < persistedMovies.size(); idx++) {
+			Hall movieProjectionHall = persistedMovies.get(idx).getProjection().getHall();
+			List<Seat> persistedSeats = new ArrayList<Seat>(seats.size());
+			for (Seat seat : seats.get(idx)) {
+				seat.setHall(movieProjectionHall);
+				persistedSeats.add(seatDAO.saveNew(seat));
+			}
+			persistedHallSeats.add(persistedSeats);
+		}
+		updateMovies(persistedMovies, persistedHallSeats);
+	}
+
+	private void updateMovies(List<Movie> persistedMovies, List<List<Seat>> persistedHallSeats) {
+		for (int idx = 0; idx < persistedMovies.size(); idx++) {
+			Movie persistedMovie = persistedMovies.get(idx);
+			List<Seat> hallSeats = persistedHallSeats.get(idx);
+			persistedMovie.getProjection().getHall().setSeats(hallSeats);
+			movieDAO.save(persistedMovie);
+		}
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent event) {
+	}
+
+}

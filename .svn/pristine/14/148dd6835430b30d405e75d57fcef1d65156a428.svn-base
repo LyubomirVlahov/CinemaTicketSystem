@@ -1,0 +1,11 @@
+package com.cinema.persistence.dao;
+
+import com.cinema.persistence.EntityManagerProvider;
+import com.cinema.persistence.model.Seat;
+
+public class SeatDAO extends BasicDAO<Seat> {
+
+	public SeatDAO(EntityManagerProvider entityManagerProvider) {
+		super(entityManagerProvider);
+	}
+}

@@ -1,0 +1,81 @@
+<%@page import="com.cinema.persistence.model.Reservation"%>
+<%@page import="com.cinema.persistence.model.User"%>
+<%@page import="com.cinema.persistence.dao.UserDAO"%>
+<%@page import="com.cinema.persistence.model.Ticket"%>
+<%@page import="java.util.List"%>
+<%@page import="com.cinema.persistence.EntityManagerProviderImpl"%>
+<%@page import="com.cinema.persistence.EntityManagerProvider"%>
+<%@page import="com.cinema.persistence.dao.TicketDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Профил</title>
+<link href="styles/visStyles.css" type="text/css" rel="stylesheet" />
+<link href="styles/visStylesUser.css" type="text/css" rel="stylesheet" />
+<link href="styles/global.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="styles/Style.css" type="text/css" media="all" />
+</head>
+<body>
+<!-- Shell -->
+<div id="shell">
+	<!-- Header -->
+	<div id="header">
+		<h1 id="logo"><a href="index.jsp">TU Cinema</a></h1>
+		<div class="social">
+			
+		</div>
+		
+		<!-- Navigation -->
+		<div id="navigation">
+			<ul>
+				<li style="font-size:16px; font-weight: bold; color: white;"> Здравейте <%= request.getUserPrincipal().getName()%> </li>
+			    <li><a href="index.jsp">Начало</a></li>
+			    <li><a href="Logout.jsp">Изход</a></li> 
+			    <li><a href="Profile.jsp">Профил</a></li>
+			</ul>
+		</div>
+		<!-- end Navigation -->
+		
+		<!-- Sub-menu -->
+		<div id="sub-navigation">
+			
+		</div>
+		<!-- end Sub-Menu -->
+		
+	</div>
+	<!-- end Header -->
+	
+	<!-- Main -->
+	<div id="main">
+		<!-- Content -->
+		<div id="content">
+		
+			<!-- Box -->
+			<div class="box">
+			
+			<% TicketDAO ticketDAO = new TicketDAO(EntityManagerProviderImpl.getInstance()); 
+				UserDAO userDAO = new UserDAO(EntityManagerProviderImpl.getInstance());
+			
+			User user = userDAO.getByUsername("");
+			List<Reservation> reservations = user.getReservations();
+			//ticketDAO.
+					
+			%>
+			
+			</div>
+			<!-- end Box -->
+				
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- end Content -->
+			
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end Main -->
+</div>
+<!-- end Shell -->
+</body>
+</html>

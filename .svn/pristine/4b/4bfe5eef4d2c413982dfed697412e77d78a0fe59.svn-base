@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/Register.css" type="text/css">
+<title>Registration is successful</title>
+</head>
+<body>
+	<div class="container">
+			<div style="text-align: center;">
+				<h1>Поздравления, Вие се регистрирахте успешно!</h1>
+				<h3 style="margin-top: 10px;"><a href="Login.jsp">Вход.</a> </h3>
+			</div>
+	</div>
+</body>
+</html>

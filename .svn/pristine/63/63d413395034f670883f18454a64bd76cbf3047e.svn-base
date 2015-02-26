@@ -1,0 +1,97 @@
+<%@page import="com.cinema.persistence.dao.ProjectionDAO"%>
+<%@page import="com.cinema.persistence.model.Movie"%>
+<%@page import="com.cinema.persistence.model.Projection"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.cinema.persistence.model.Reservation"%>
+<%@page import="com.cinema.persistence.model.User"%>
+<%@page import="com.cinema.persistence.dao.UserDAO"%>
+<%@page import="com.cinema.persistence.model.Ticket"%>
+<%@page import="java.util.List"%>
+<%@page import="com.cinema.persistence.EntityManagerProviderImpl"%>
+<%@page import="com.cinema.persistence.EntityManagerProvider"%>
+<%@page import="com.cinema.persistence.dao.TicketDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/CinemaTicketSystem/styles/Style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/CinemaTicketSystem/styles/global.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/CinemaTicketSystem/styles/visStyles.css" type="text/css"/>
+<link rel="stylesheet" href="/CinemaTicketSystem/styles/visStylesUser.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Профил</title>
+</head>
+<body>
+<!-- Shell -->
+<div id="shell">
+<jsp:include page="headerAdmin.jsp" />
+
+<!-- Main -->
+<div id="main">
+	<!-- Content -->
+	<div id="content">
+	
+		<!-- Box -->
+		<div class="box">
+		
+		<% 
+			String projectionIdString = request.getParameter("projectionId");
+			long projectionId = Long.valueOf(projectionIdString);
+			ProjectionDAO projectionDAO = new ProjectionDAO(EntityManagerProviderImpl.getInstance());
+			Movie movie = projectionDAO.getById(projectionId).getMovie();
+		
+			UserDAO userDAO = new UserDAO(EntityManagerProviderImpl.getInstance());
+			User user = userDAO.getByUsername(request.getUserPrincipal().getName());
+		
+			Projection userProjection= new Projection();
+			
+			List<Reservation> reservations = user.getReservations();		
+			List<Ticket> userTickets= new ArrayList<Ticket>();
+			List<String> userReservations = new ArrayList<String>();	
+			
+			for(Reservation reservation : reservations){
+				if(reservation.getProjection().getMovie().getTitle().equals(movie.getTitle())) {
+					userTickets.addAll(reservation.getTickets());
+				}
+			}					
+		%>
+		<%if(userTickets.size() != 0) { %>
+		<h1>Списък със закупени билети: </h1>
+			
+			<% for(Ticket ticket : userTickets){ 				
+				userProjection=ticket.getReservation().getProjection(); %>	
+					
+				<div class="ticketInfo" >
+					<h4>Филм: </h4> <%= movie.getTitle() %> 
+					<h4>Дата: </h4> <%= userProjection.getStartDate() %>
+					<h4>Място: </h4> ред: <%= ticket.getSeat().getRow() %>, място <%= ticket.getSeat().getColumn() %>
+					<h4>Цена: </h4> <%= userProjection.getPrice() %>
+					<h4>Потребител: </h4><%=ticket.getReservation().getUser().getUsername()%>
+					<h4>Дошъл: </h4>
+					<% if(ticket.isChecked()){
+							out.append("Да");
+						}
+						else{ out.append("Не");
+						}%>
+				</div>
+			<%} %>
+		<%} else { %>
+			<h1>Няма закупени билети за този филм! </h1>
+		<%} %>			
+		</div>
+		<!-- end Box -->
+			
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end Content -->
+		
+	<div class="cl">&nbsp;</div>
+</div>
+<!-- end Main -->
+</div>
+<!-- end Shell -->
+<jsp:include page="footerAdmin.jsp" />
+</body>
+</html>

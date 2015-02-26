@@ -1,0 +1,7 @@
+package com.cinema.booking;
+
+public interface BookingAgent {
+
+	void book(BookRequest bookRequest, String username) throws BookingException;
+
+}

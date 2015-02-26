@@ -1,0 +1,43 @@
+$(".freeSeat").click(function(evnt){
+	var selectedImg = evnt.currentTarget;
+	var selectedTableData = selectedImg.parentElement;
+	switch (selectedImg.className) {
+	case "freeSeat":
+		selectedImg.src = "img/selected_seat.png";
+		selectedImg.className = "chosenSeat";
+		break;
+	case "chosenSeat":
+		selectedImg.src = "img/free_seat.png";
+		selectedImg.className = "freeSeat";
+		break;
+	default:
+		console.error("Invalid selected seat class: " + selectedImg.className);
+		break;
+	}
+});
+
+function requestReservation(){
+	var aSeatIds = [];
+	var selectedSeatsImages = $(".chosenSeat");
+	for(var idx=0; idx < selectedSeatsImages.length; idx ++){
+		var seatImg = selectedSeatsImages[idx];
+		var seatId = seatImg.getAttribute("seatid");
+		aSeatIds.push(new Number(seatId));
+	}
+	
+	var fDoneCallback = function(){
+		alert("Uspeshno rezervirane");
+	};
+	
+	var fFailCallback = function(){
+		alert("Neuspeshno rezervirane");
+	};
+	
+	jQuery.ajax({
+			url : "bookNow",
+			type : "POST",
+			//dataType : "json",
+			contentType : "application/json; charset=utf-8",
+			data : JSON.stringify(aSeatIds)
+		}).done(fDoneCallback).fail(fFailCallback).always(null);
+}

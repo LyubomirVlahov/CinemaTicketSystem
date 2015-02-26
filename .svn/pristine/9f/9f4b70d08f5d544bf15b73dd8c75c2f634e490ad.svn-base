@@ -1,0 +1,366 @@
+.screen {
+	
+}
+
+.busySeat {
+	cursor: default;
+}
+
+.freeSeat {
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.BodyTable {
+	background-color: transparent;
+	border-style: solid;
+	border-color: #29087B;
+	border-width: 1px;
+	border-top: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.Legend {
+	font-size: 10px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: middle;
+}
+
+#divLegend span {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	white-space: nowrap;
+}
+
+.Screen-Back {
+	
+}
+
+.Screen-AllAreas {
+	background: #FFFFFF none repeat scroll 0 0;
+	overflow: auto;
+	width: 100%;
+	position: relative;
+	
+}
+
+.Seating-Area {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	border-collapse: collapse;
+}
+
+.Seating-Area tr, td {
+	padding: 0px;
+	margin: 0px;
+	border: 0;
+}
+
+.Seating-Area img {
+	vertical-align: top;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.Seating-Area p {
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	position: absolute;
+	z-index: 1;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 11px;
+	color: black;
+	display: table-cell;
+	cursor: pointer;
+}
+
+.Seating-RowLabelContainer {
+	
+	height: 100%;
+	float: left;
+	position: relative;
+	
+	
+	display: inline-block;
+	text-align: center;
+	width: 15px;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.Seating-RowLabelContainer>table {
+	
+	position: absolute;
+	width: 100%;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+}
+
+.unselectable {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+A.CinemaLinkSml:hover {
+	color: #FFFF00;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.MovieLinkSml:hover {
+	color: #FFFF00;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.MovieLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.RatingLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.SessionLink:hover {
+	font-size: 11px;
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.NavigationLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ActorNameLink:hover {
+	color: #448AFE;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.DirectorNameLink:hover {
+	color: #448AFE;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.MovieWebsiteLink:hover {
+	color: #448AFE;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+A.SeatAllocationOn:hover {
+	color: #FF8484;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.SeatAllocationOff:hover {
+	color: #3CA2DB;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.SessionSoldOut:hover {
+	color: #FCA743;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.CinemaLink:hover {
+	color: #5933B7;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+A.CinemaSelectedLink:hover {
+	color: #5933B7;
+	background-color: #FFFF00;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: underline;
+}
+
+
+A.MovieNameHomePage:hover {
+	font-size: 11px;
+	color: #FD6A6A;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+
+.ImageAppletExample {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+A.LoyaltyLoginTextLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ComingSoonCtrlLink:hover {
+	color: #FF0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+	font-weight: bold;
+}
+
+A.NowShowingCtrlLink:hover {
+	color: #FF0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+	font-weight: bold;
+}
+
+A.EventMovieLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.EventRatingLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.EventSessionLink:hover {
+	font-size: 11px;
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.EventNavigationLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ShowtimesMovieLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ShowtimesSessionLink:hover {
+	font-size: 11px;
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ShowtimesSessionAllocatedLink:hover {
+	font-size: 11px;
+	color: #FF8484;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ShowtimesSessionUnallocatedLink:hover {
+	font-size: 11px;
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ShowtimesSessionSoldOutLink:hover {
+	font-size: 11px;
+	color: #FCA743;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+A.ShowtimesNavigationLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+.LtyRewardConfKioskCancel {
+	float: right;
+	display: inline;
+	text-align: right;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+A.CategoryLink:hover {
+	color: #CC0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+	text-decoration: none;
+}
+
+
+
+.Seating-Control {
+	
+	overflow: auto;
+	position: relative;
+	
+	width: 560px;
+	margin: 5px auto;
+}
+
+.Seating-Control>div {
+	
+	width: 560px; 
+	overflow: visible;
+}
+
+.Seating-Theatre {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.Seating-Container {
+	position: relative;
+	visibility: hidden;
+	
+	margin: 0 auto;
+}
+
+.Seating-Screen {
+	position: relative;
+	height: 20px;
+	margin: 0 auto;
+}
+
+.Seating-Screen img {
+	height: 100%;
+}

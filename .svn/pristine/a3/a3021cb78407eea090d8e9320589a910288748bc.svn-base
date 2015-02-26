@@ -1,0 +1,4 @@
+function unhide(divID) {
+	$(".movieDescr").hide();
+	$("#" + divID).show();
+}

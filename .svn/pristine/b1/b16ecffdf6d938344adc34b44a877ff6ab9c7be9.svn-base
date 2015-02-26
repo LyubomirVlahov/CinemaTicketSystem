@@ -1,0 +1,35 @@
+function timer(time, update, complete) {
+	var start = new Date().getTime();
+	var interval = setInterval(function() {
+		var now = time - (new Date().getTime() - start);
+		if (now <= 0) {
+			clearInterval(interval);
+			complete();
+		} else
+			update(Math.floor(now / 1000));
+	}, 1000); // the smaller this number, the more accurate the timer will be
+}
+
+function payReservation(reservId){
+
+	var fDoneCallback = function(body, msg, oResponse) {
+		window.location = "SuccessfulPayment.jsp";
+	};
+
+	var fFailCallback = function(oResponse) {
+		if (oResponse.status == 400) {
+			alert("Подали сте навалидно ID за резервация. Моля опитайте отново отново.");
+		} else {
+			alert("Неуспешно плащане на резервация. Моля опитайте отново.");
+		}
+	};
+
+	jQuery.ajax({
+		url : "payReservation",
+		type : "POST",
+		contentType : "application/json; charset=utf-8",
+		data : JSON.stringify({
+			reservationId : reservId
+		})
+	}).done(fDoneCallback).fail(fFailCallback).always(null);
+}
